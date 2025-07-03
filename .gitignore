@@ -1,4 +1,39 @@
+# Секреты и переменные окружения
 .env
+.env.*
+
+# Кэш Python и байткод
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Системные файлы
 .DS_Store
+Thumbs.db
+Desktop.ini
+
+# Виртуальные окружения
+env/
+venv/
+.venv/
+ENV/
+
+# Логи
+*.log
+
+# IDE/редакторы
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest/coverage/cache
+.pytest_cache/
+.tox/
+.nox/
+.cache
+coverage.xml
+*.cover
+*.py,cover
