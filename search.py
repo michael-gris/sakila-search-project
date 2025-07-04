@@ -36,8 +36,8 @@ def search_by_keyword(
         mongo_collection.insert_one(
             {
                 "timestamp": datetime.now(),
-                "search_type": "keyword",
-                "params": {"keyword": keyword},
+                "query_type": "keyword",
+                "details": keyword,
                 "results_count": len(results),
             }
         )
@@ -85,12 +85,8 @@ def search_by_genre_and_year(
         mongo_collection.insert_one(
             {
                 "timestamp": datetime.now(),
-                "search_type": "genre_year",
-                "params": {
-                    "category_id": category_id,
-                    "year_from": year_from,
-                    "year_to": year_to,
-                },
+                "query_type": "genre_year",
+                "details": f"genre_id={category_id}, years={year_from}-{year_to}",
                 "results_count": len(results),
             }
         )
